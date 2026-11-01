@@ -221,7 +221,6 @@ function customize_effect_ui.show_customize_effect_ui(wnd, effect_id, modify_eff
     local range_input = I.UIToolkit.Components.dropbox { -- Default is this guys is disabled
         items = valid_ranges,
         width = 150,
-        maxVisibleItems = 8,
         onItemSelected = function(item, index)
             enchanter.effect_to_add.range = item.id
 
@@ -282,6 +281,7 @@ function customize_effect_ui.show_customize_effect_ui(wnd, effect_id, modify_eff
     local skill_select = I.UIToolkit.Components.dropbox {
         items = skills,
         width = 150,
+        maxVisibleItems = 8,
         onItemSelected = function(item, index)
             enchanter.effect_to_add.affectedSkill = item
         end,
